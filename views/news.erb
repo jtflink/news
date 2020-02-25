@@ -38,22 +38,19 @@
     <div class="member_benefits py-5">
       <div class="container">
         <div class="row">
-          <div class="col text-center">
-            <h1><%= @weather %></h1>
+          <div class="col text-center mb-5">
+            <h2><%= "Here is your weather report for #{@location}:" %></h2>
           </div>
         </div>
-        <ul class="list-unstyled mt-4">
-          <li class="investors_page_headers h5 font-weight-bold">1) Deal Flow</li>
-          <li class="my-4">Through our structured and collaborative deal sourcing process, we enable our members to see far more deal opportunities than typical private investors are likely to see operating independently and our deal flow is growing.  We also have exposure to a growing universe of deals through our sister HBS Alumni Angels organizations operating in other cities around the world.</li>
-          <li class="investors_page_headers h5 font-weight-bold">2) Our deals are screened and analyzed</li>
-          <li class="my-4">We have a diverse screening committee, whose members have prior experience in venture capital, private investing, investment banking, early stage startup management and a variety of other disciplines.  Our collaboration provides a deeper and broader analytical capability to review deals than is otherwise typically available to private investors.</li>
-          <li class="investors_page_headers h5 font-weight-bold">3) Face-to-Face Meetings</li>
-          <li class="my-4">Our Angels have the opportunity to meet face-to-face with screened companies.  We hold on average one dinner meeting each calendar quarter, at which we bring together selected companies and our Angels.  The meetings offer great opportunities to evaluate the presenting companies, discuss the opportunities with peers, meet other like-minded investors, and to learn more about early stage investing.</li>
-          <li class="investors_page_headers h5 font-weight-bold">4) Collaborative Due Diligence</li>
-          <li class="my-4">For those who are interested in potentially investing in a presenting company, we form teams that work together on due diligence, review of deal documents and negotiation of terms.  Most private investors are on their own during this critical process.</li>
-          <li class="investors_page_headers h5 font-weight-bold">5) Social Interaction</li>
-          <li class="my-4">Our quarterly pitch dinner events and other activities provide great opportunities for interacting with an accomplished group of like minded investors.</li>
-        </ul>
+          <div class="row mb-5">
+              <h5><%= "Currently in #{@location} it is #{@current_temp} with #{@current_conditions}" %></h5>
+          </div>
+          <% for day in @extended_forecast %>
+            <div class="row mb-2">
+              <h5><%= "On date, we expect a high of #{day["temperatureHigh"]} and a low of #{day["temperatureLow"]}, with #{day["summary"]}" %></h5>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     

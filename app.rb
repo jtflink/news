@@ -9,14 +9,18 @@ before { puts "Parameters: #{params}" }
 ForecastIO.api_key = "103c9e3d94ccd1d6356896c2d9c4db5f"
 
 get "/" do
-  view "ask"
+    view "ask"
 end
 
 get "/news" do
-  results = Geocoder.search(params["q"])
-  lat_long = results.first.coordinates
-  forecast = ForecastIO.forecast(lat_long[0],lat_long[1]).to_hash
-  @weather = "#{forecast["daily"]["data"][0]["temperatureHigh"]}"
+    results = Geocoder.search(params["q"])
+    lat_long = results.first.coordinates
+    forecast = ForecastIO.forecast(lat_long[0],lat_long[1]).to_hash
+    
+    @current_temp = forecast["currently"]["temperature"]
+    @current_conditions = forecast["currently"]["summary"]
+    @location = params["q"]
+    @extended_forecast = forecast["daily"]["data"]
 
   view "news"
 end
