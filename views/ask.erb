@@ -6,25 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Google Fonts -->
-    <!-- Swap out "Roboto" for the font(s) you want to use -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <!-- Your own CSS -->
-    <link rel="stylesheet" href="/styles.css">
 
-    <title>News</title>
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Weather + News</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="logo.png" class="d-inline-block align-middle">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <div class="container mt-5">
-      <h1>News</h1>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="pb-5">The Weather. The News. All in one place.</h1>
+        <div class="form pt-5">
+          <form action="/news">
+            <div class="form-group">
+              <label>Enter your location</label>
+              <input type="text" class="form-control" name="q" placeholder="Location">
+            </div>
+            <button type="submit" class="btn btn-outline-light mt-2">Check weather and news</button>
+          </form>
+        </div>
+      </div>
     </div>
+    
+    <!-- Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

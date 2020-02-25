@@ -1,0 +1,42 @@
+/* Default font */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Navbar, including overriding background color */
+.navbar {
+  background-color: #FEFEFE;
+}
+
+.navbar img {
+  height: 40px;
+}
+
+/* Jumbotron, including overriding text color */
+.jumbotron {
+  background-color: #173560;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+/* Overriding button style rules */
+.btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #4472C4;
+  border-color: #4472C4;
+  color: #ffffff;
+}
+
+.form {
+  font-size: 20px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
