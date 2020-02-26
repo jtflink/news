@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/">
           <img src="logo.png" class="d-inline-block align-middle">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
           </div>
         </div>
       </div>
@@ -42,15 +42,27 @@
           <form action="/news">
             <div class="form-group">
               <label>Enter your location</label>
-              <input type="text" class="form-control" name="q" placeholder="Location">
+              <input type="text" class="form-control" name="location" placeholder="Location" required>
             </div>
             <button type="submit" class="btn btn-outline-light mt-2">Check weather and news</button>
           </form>
         </div>
       </div>
     </div>
-    
+
     <!-- Footer -->
+    <div class="footer mt-5">
+      <div class="container">
+        <div class="row pb-5">
+          <div class="col-sm-8 mt-2">
+            <img src="logo.png">
+          </div>
+          <div class="col mt-3">
+            <p><em>The best weather and news app available</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

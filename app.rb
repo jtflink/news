@@ -13,14 +13,19 @@ get "/" do
 end
 
 get "/news" do
-    results = Geocoder.search(params["q"])
+    results = Geocoder.search(params["location"])
     lat_long = results.first.coordinates
     forecast = ForecastIO.forecast(lat_long[0],lat_long[1]).to_hash
+
+    url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=09b48d36f80a4001a2efbef6d66b32f3"
+    news = HTTParty.get(url).parsed_response.to_hash
     
     @current_temp = forecast["currently"]["temperature"]
     @current_conditions = forecast["currently"]["summary"]
-    @location = params["q"]
+    @location = params["location"]
     @extended_forecast = forecast["daily"]["data"]
 
-  view "news"
+    @articles = news["articles"]
+
+    view "news"
 end

@@ -1,18 +1,15 @@
-/* Default font */
 body {
   font-family: 'Raleway', sans-serif;
 }
 
-/* Navbar, including overriding background color */
 .navbar {
-  background-color: #FEFEFE;
+  background-color: #ffffff;
 }
 
-.navbar img {
+img {
   height: 40px;
 }
 
-/* Jumbotron, including overriding text color */
 .jumbotron {
   background-color: #173560;
   background-repeat: no-repeat;
@@ -23,20 +20,42 @@ body {
   align-items: center;
 }
 
-/* Overriding button style rules */
-.btn {
-  border-color: #ffffff;
-  color: #ffffff;
-}
-
-.btn:hover {
-  background-color: #4472C4;
-  border-color: #4472C4;
-  color: #ffffff;
-}
-
 .form {
   font-size: 20px;
   padding-left: 25%;
   padding-right: 25%;
+}
+
+.weather {
+  background-color: #D2E1F2;
+}
+
+.news {
+  background-color: #D2E1F2;
+}
+
+.table tr {
+  width: 100%;
+}
+
+.btn {
+  border-color: #173560;
+  color: #173560;
+}
+
+.btn:hover {
+  background-color: #173560;
+  border-color: #173560;
+  color: #ffffff;
+}
+
+.jumbotron button {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.jumbotron button:hover {
+  background-color: #4472C4;
+  border-color: #4472C4;
+  color: #ffffff;
 }
